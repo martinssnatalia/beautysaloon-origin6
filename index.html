@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!-- definindo como HTML moderno (HTML 5) -->
+<html lang="pt_BR">
+  <!--tag root/raiz -->
+  <head>
+    <!-- aqui ficam os elementos que não são relacionados a parte branca da página, ao body. É aqui que vai entrar as configs de CSS etc -->
+    <meta charset="UTF-8" />
+    <!-- sem isso, em alguns navegadores o conteúdo do body é exibido de forma desconfigurada. É coolocado por padrão-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- vem por padrão pelo Emmet, não faz diferença -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport é a largura e altura de dispositivo. Nesse caso está falando para receber a largura do dispositivo e manter a escala em 1, tornando mais flexível-->
+    <title>OriginSix</title>
+
+    <!-- ÍCONES -->
+    <link rel="stylesheet" href="assets/fonts/style.css" />
+
+    <!-- SWIPER (CSS) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!--   STYLES (CSS)  -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!--  FONTS   -->
+
+    <!--copiar e colar o link das fontes selecionadas no google fonts. Pra saber qual o peso e qual o nome da fonte a partir do layout do figma, clicar em cima e ir em inspect-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!--preconnect = "faça uma conexao rapida enquanto esta carregando a pagina com as fontes do google"-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header" class="scroll">
+      <!-- id = identificador único-->
+      <nav class="container">
+        <a class="logo" href="#">beauty<span>salon</span>.</a>
+        <!--span é uma tag sem muito significado, usada para alinhamento-->
+        <!--menu-->
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="#home">Início</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#testimonials">Depoimentos</a></li>
+            <li><a class="title" href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <!-- /menu-->
+        <div class="toggle icon-menu"></div>
+        <div class="toggle icon-close"></div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HOME -->
+      <section class="section" id="home">
+        <div class="container grid">
+          <!--da para colocar qnts classes quiser, só separar com espaço-->
+          <div class="image">
+            <img
+              src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              alt="descrição verbal da imagem, será lida pelos leitores para pessoas com deficiência, por exemplo"
+            /><!-- algumas tags não tem fechamento porque não possuem conteúdo, só atributos -->
+          </div>
+          <div class="text">
+            <h2 class="title">Saúde natural para os seus cabelos</h2>
+            <!-- h1 é usada só para o título/ mensagem principal da página. não é indicado ficar repetindo tag de título, mas o Mayk diz que explica isso na trilha discover-->
+            <p>
+              Um salão exclusivo em São Paulo, especializado em tratamentos
+              naturais.
+            </p>
+            <a class="button" href="#">Agendar um horário</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <div class="container grid">
+          <div class="image">
+            <img
+              src="https://images.unsplash.com/photo-1559599101-f09722fb4948?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGFpcmRyZXNzZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+              alt="3 mulheres. a da esquerda segurando uma escova, a do meio uma tesoura e a da direita uma tesoura e uma escova"
+            />
+          </div>
+          <div class="text">
+            <h2 class="title">Sobre nós</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Necessitatibus deleniti perferendis vel molestiae soluta, quaerat
+              beatae dicta ducimus praesentium architecto harum dolorum
+              distinctio illo earum assumenda itaque. Omnis, quam repellat.
+              <!-- lorem - texto fake -->
+            </p>
+            <br />
+            <!--tag brake/ quebra de linha-->
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+              illum ratione impedit quae eum quis adipisci asperiores, est
+              doloribus distinctio excepturi minima eius dolore! Perferendis
+              laborum illo aspernatur repellendus ipsum.
+            </p>
+            <br />
+
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed
+              exercitationem, illum sapiente quasi hic iusto odio maiores esse
+              quaerat quis necessitatibus at odit, dolores dicta, officia ab
+              quos. Provident, quae.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+      <!-- SERVICES -->
+      <section class="section" id="services">
+        <div class="container grid">
+          <header>
+            <h2 class="title">Serviços</h2>
+            <p class="subtitle">
+              Com mais de 10 anos no mercado, o <strong>Beautysalon</strong> já
+              conquistou clientes de inúmeros países com seus tratamentos
+              exclusivos e totalmente naturais
+            </p>
+          </header>
+          <div class="cards grid">
+            <div class="card">
+              <i class="icon-woman-hair"></i>
+              <h3 class="title">Terapia capilar</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis
+                quam dolor inventore, ad commodi aperiam illo nulla, asperiores
+                cumque explicabo consequatur totam ea, temporibus similique
+                neque expedita sunt tempore magni.
+              </p>
+            </div>
+            <div class="card">
+              <i class="icon-trim"></i>
+              <h3 class="title">Cortes</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil
+                magni fugit, aspernatur accusantium sunt saepe quod doloremque?
+                Eaque, maiores pariatur soluta sequi obcaecati harum. Maiores
+                odit hic dolore natus voluptas!
+              </p>
+            </div>
+            <div class="card">
+              <i class="icon-cosmetic"></i>
+              <h3 class="title">Tratamentos</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                ipsa perferendis non delectus necessitatibus dolorum voluptatum
+                illum unde enim aliquam eligendi tenetur, deserunt reprehenderit
+                repudiandae earum, voluptas dignissimos voluptatibus! Cum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+      <!-- TESTIMONIALS -->
+      <section class="section" id="testimonials">
+        <div class="container">
+          <header>
+            <h2 class="title">Depoimentos de quem já passou por aqui</h2>
+          </header>
+          <div class="testimonials swiper-container">
+            <!--todas essas infos de classes necessarias do swiper estao no site swiperjs.com-->
+            <div class="swiper-wrapper">
+              <!--caixa que contém todos os depoimentos-->
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <!--aspas-->
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sunt dolores quos dolore id, omnis ratione beatae natus?
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/17.jpg"
+                      alt="Foto de Wanessa Souza"
+                    />
+                    Wanessa Souza
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <!--aspas-->
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sunt dolores quos dolore id, omnis ratione beatae natus?
+                  </p>
+                  <cite>
+                    <img
+                      src="assets/photos/eu.jpg"
+                      alt="Foto de Natalia Martins"
+                    />
+                    Natalia Martins
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <!--aspas-->
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sunt dolores quos dolore id, omnis ratione beatae natus?
+                  </p>
+                  <cite>
+                    <img
+                      src="https://conteudo.imguol.com.br/c/entretenimento/00/2021/05/17/juliette-freire-campea-do-bbb-21-e-a-nova-embaixadora-da-avon-1621298390511_v2_900x506.jpg.webp"
+                      alt="Foto de Juliette Ferreira"
+                    />
+                    Juliette Ferreira
+                  </cite>
+                </blockquote>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Entre em contato com a gente</h2>
+            <p>
+              Entre em contato com a Beautysalon, queremos tirar suas dúvidas,
+              ouvir suas críticas e sugestões.
+            </p>
+            <a
+              class="button"
+              href="https://api.whatsapp.com/send?phone=+5521991075446&text=Oi! Gostaria de marcar um horário."
+              target="_blank"
+              ><i class="icon-whatsapp"></i>Entrar em contato</a
+            >
+          </div>
+
+          <div class="links">
+            <ul>
+              <li><i class="icon-phone"></i>11 99845-6754</li>
+              <li><i class="icon-map-pin"></i>R. Amauri Souza, 346</li>
+              <li><i class="icon-mail"></i>contato@beautysalon.com</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-1"></div>
+    </main>
+
+    <!--é indicado que o footer fique fora do main para dar sentido a estrutura do html. header - main - footer -->
+    <footer class="section">
+      <!--class section add pra tb ganhar o padding igual-->
+      <div class="container grid">
+        <div class="brand">
+          <a class="logo logo-alt" href="#home">beauty<span>salon</span>.</a>
+          <p>©2021 Beautysalon.</p>
+          <p>Todos os direitos reservados.</p>
+        </div>
+
+        <div class="social">
+          <a href="https://instagram.com" target="_blank"
+            ><i class="icon-instagram"></i
+          ></a>
+          <a href="https://facebook.com" target="_blank"
+            ><i class="icon-facebook"></i
+          ></a>
+          <a href="https://youtube.com" target="_blank"
+            ><i class="icon-youtube"></i
+          ></a>
+          <!-- target="_blank" p abrir uma nova janela ao clicar-->
+        </div>
+      </div>
+    </footer>
+
+    <!-- seta para voltar para o home -->
+    <a href="#home" class="back-to-top"><i class="icon-chevrons-up"></i></a>
+
+    <!-- SWIPER (JAVASCRIPT)-->
+    <!--antes do meu js para ler ele primeiro -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!--SCROLL REVEAL / NÃO TA FUNCIONANDO  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- main.js-->
+    <script src="main.js"></script>
+  </body>
+  <!--header, main, etc são só tags semânticas para deixar o código mais organizado, não tendo influêcia na aparência do site. No entanto, códigos organizados são mais facilmente achados por mecanismos de busca e se tornam mais acessíveis a pessoas com necessidades especiais -->
+</html>
